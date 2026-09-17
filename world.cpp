@@ -81,12 +81,40 @@ using str = std::string;
         if(num==guess){std::cout << "You have taken " << tries << " tries to guess the number \n"; return 0;}
     }while(num!=guess);
 }*/
- 
-int main(){
-    int a;
-    std::cin >> a;
-    if(std::)
-    std::cout << a;
+
+void bubble_sort(int arr[] , int size){
+    int i,j,temp;
+    for(i=0;i<size;i++)
+        for(j=0;j<size-i-1;j++){
+            if(arr[j] < arr[j+1]){
+                temp = arr[j];
+                arr [j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
 }
 
+void linear_sort(int arr[], int size){
+    int i,j;
+    for(i=0;i<size;i++){
+        int min = i;
+        for(j=i;j<size;j++){
+            if(arr[min] > arr[j])
+                min = j;
+        }
+        std::swap(arr[min],arr[i]);
+    }
+}
+
+int main(){
+    int number[5];
+    int i=0,size;
+    for(;i<=4;i++)
+        std::cin >> number[i];
+    size = sizeof(number) / sizeof(number[0]);
+    linear_sort(number,size);
+    for(int num : number)
+        std:: cout << num << " " ;
+    
+}
 

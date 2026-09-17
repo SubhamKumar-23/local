@@ -22,9 +22,9 @@ char getUserchoice(){
     char choice;
     do{
         std::cout << "\n************************\n";
-        std::cout << "\nEnter \'r\' for ROCK\n";
-        std::cout << "Enter \'p\' for PAPER\n";
-        std::cout << "Enter \'s\' for SCISSOR\n";
+        std::cout << "\nEnter 'r' for ROCK\n";
+        std::cout << "Enter 'p' for PAPER\n";
+        std::cout << "Enter 's' for SCISSOR\n";
         std::cout << "Enter your choice\n";
         std::cin >> choice;
         if(choice!='r' && choice!='p' && choice!='s')
